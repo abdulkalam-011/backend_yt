@@ -1,0 +1,17 @@
+{
+  "name": "backendyt",
+  "version": "1.0.0",
+  "description": "a youtube backend with secure features ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "yt",
+    "youtube"
+  ],
+  "author": "abdul kalam",
+  "license": "ISC"
+}
