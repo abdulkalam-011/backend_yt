@@ -12,13 +12,13 @@ const userSchema = new Schema(
       index: true,
     },
     fullName: {
-      ttype: String,
+      type: String,
       required: true,
       index: true,
     },
     email: {
       type: String,
-      requiered: true,
+      required: true,
       unique: true,
       lowercase: true,
     },
@@ -28,14 +28,15 @@ const userSchema = new Schema(
     },
     avatar: {
       type: String,
+      required: true,
     },
     banner: {
-      type: string,
+      type: String,
     },
     watchHistory: [
       {
         type: Schema.Types.ObjectId,
-        ref: "video",
+        ref: "Video",
       },
     ],
     refreshToken: {
@@ -75,6 +76,6 @@ userSchema.methods.generateRefreshToken = function () {
     process.env.REFRESH_TOKEN_SECRET,
     { expiresIn: process.env.REFRESH_TOKEN_EXPIRY }
   );
-}
+};
 
 export const User = mongoose.model("User", userSchema);
