@@ -1,10 +1,9 @@
 class apiError extends Error {
   constructor(
-    message = "something went wong",
     statusCode,
-    stack = null,
     errors = [],
-    stack = ""
+    stack = "",
+    message = "something went wong"
   ){
     super(message); // Call the parent class constructor
     this.statusCode = statusCode;
